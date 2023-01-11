@@ -1,0 +1,17 @@
+<div class="main-wrapper">
+    <div class="header-wrapper">
+        <div class="sections-wrapper">
+            <app-section-select optionLinkUrl="board" selectOptionsUrl="Board/userBoards" sectionName="My boards"></app-section-select>
+            <app-section-select optionLinkUrl="board" selectOptionsUrl="Board/shared" sectionName="Shared boards"></app-section-select>
+        </div>
+        <div class="user-control-wrapper">
+            <p class="user-name">Test user</p>
+            <div class="avatar-wrapper">
+                <img src="./../../../assets/img/default_ava.png">
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>

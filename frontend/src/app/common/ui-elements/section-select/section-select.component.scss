@@ -1,0 +1,62 @@
+:host {
+    display: flex;
+    align-items: center;
+}
+
+.marker-click-animation {
+    transition: transform 1s;
+    transform: rotate(540deg);
+}
+
+.section-select-selected {
+    transform: scale(1.1);
+}
+
+.section-name-wrapper {
+    .section-name {
+        font-size: 1.2em;
+    }
+
+    .marker {
+        transition: transform 1s;
+        font-size: 0.9em;
+    }
+    
+    span {
+        display: inline-block;
+        margin: 0 4px;
+    }
+}
+
+.section-select-wrapper {
+    position: relative;
+    transition: 0.3s;
+    z-index: 1000;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+.options-wrapper {
+    position: absolute;
+    margin: 10px;
+    box-shadow: 5px 5px 10px #888;
+    overflow-y: scroll;
+    max-height: 0;
+    transition: 0.3s;
+
+    .option-name {
+        position: relative;
+        box-sizing: border-box;
+        background-color: #fff;
+        min-width: 200px;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: rgb(162, 97, 208);
+            color: #fff;
+        }
+    }
+}   

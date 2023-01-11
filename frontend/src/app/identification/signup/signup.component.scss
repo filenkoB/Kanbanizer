@@ -1,0 +1,41 @@
+.signup-form .input-wrapper {
+    margin: 10px 0px;
+}
+
+.signup-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    justify-content: start;
+    align-items: center;
+
+    .signup-title {
+        margin-bottom: 20px;
+        font-size: 23px;
+        font-weight: 700;
+    }
+}
+
+.buttons-wrapper {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+
+    .submit-button {
+        width: 75px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .back-to-login-button {
+        width: 120px;
+        height: 30px;
+    }
+}
+
+::ng-deep {
+    .input {
+        width: 300px;
+    }
+}

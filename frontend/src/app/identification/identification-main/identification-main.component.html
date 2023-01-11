@@ -1,0 +1,12 @@
+<div class="backgroung-image-layer">
+    <div class="backgroung-image-cover">
+        <div class="center-container" #centerContainer>
+            <p *ngIf="showTitle" class="app-title-wrapper">
+                <span class="app-title" (click)="openLoginForm()">Canbanizer</span>
+            </p>
+            <div *ngIf="!showTitle" class="identification-main-wrapper">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

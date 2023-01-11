@@ -1,0 +1,28 @@
+<div class="login-wrapper">
+    <p class="login-title">Log in</p>
+    <form class="login-form" [formGroup]="formGroup" (ngSubmit)="logIn()" novalidate>
+        <app-input [ngClass]="{'invalid-input' : formGroup.controls['login'].touched && formGroup.controls['login'].invalid }"
+            [(ngModel)]="login" class="input" formControlName="login" type="email" placeholder="Login">
+            <p class="error-message" *ngIf="formGroup.controls['login'].touched && formGroup.controls['login']!.errors?.['required']">
+                Login is required
+            </p>
+            <p class="error-message" *ngIf="formGroup.controls['login']!.errors?.['email']">
+                Login is invalid
+            </p>
+        </app-input>
+        <app-input [ngClass]="{'invalid-input' : formGroup.controls['password'].touched && formGroup.controls['password'].invalid }"
+            [(ngModel)]="password" class="input" formControlName="password" type="password" placeholder="Password">
+            <p class="error-message" *ngIf="formGroup.controls['password'].touched &&
+                (formGroup!.controls['password']!.errors?.['required'] || formGroup!.controls['password']!.errors?.['minlength'])">
+                Password must contain at least 8 characters
+            </p>
+            <p class="error-message" *ngIf="formGroup!.controls['password']!.errors?.['maxlength']">
+                Password maximal length is 24 characters
+            </p>
+        </app-input>
+        <div class="submit-wrapper">
+            <app-submit-button class="submit-button">Login</app-submit-button>
+        </div>
+    </form>
+    <a routerLink="./../signup">Not logged in? Sign up now</a>
+</div>

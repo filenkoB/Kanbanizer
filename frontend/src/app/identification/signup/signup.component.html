@@ -1,0 +1,14 @@
+<div class="signup-wrapper">
+    <p class="signup-title">Sign up</p>
+    <form class="signup-form" [formGroup]="formGroup" (ngSubmit)="signup()">
+        <app-input class="input" type="text" placeholder="First name">First name</app-input>
+        <app-input class="input" type="text" placeholder="Last name">Last name</app-input>
+        <app-input class="input" type="email" placeholder="Login">Login</app-input>
+        <app-input class="input" type="password" placeholder="Password">Password</app-input>
+        <app-input class="input" type="password" placeholder="Confirm password">Confirm password</app-input>
+        <div class="buttons-wrapper">
+            <app-button routerLink="./../login" class="back-to-login-button">Back to login</app-button>
+            <app-submit-button class="submit-button">Sign up</app-submit-button>
+        </div>
+    </form>
+</div>

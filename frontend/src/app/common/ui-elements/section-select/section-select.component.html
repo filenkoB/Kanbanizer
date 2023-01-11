@@ -1,0 +1,8 @@
+<div class="section-select-wrapper" #sectionSelectWrap>
+    <p class="section-name-wrapper" (click)="toggleSelect()" [style.color]="color">
+        <span class="section-name">{{ sectionName }}</span><span #marker class="marker">▼</span>
+    </p>
+    <div *ngIf="isSelect" class="options-wrapper" #options>
+        <p [routerLink]="optionLinkUrl + '/' + option.id" class="option-name" *ngFor="let option of cachedOptions">{{ option.name }}</p>
+    </div>
+</div>

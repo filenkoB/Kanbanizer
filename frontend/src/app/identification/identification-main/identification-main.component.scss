@@ -1,0 +1,55 @@
+.backgroung-image-layer {
+    background-image: url('./../../../assets/img/intro.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.backgroung-image-cover {
+    background-color: rgba(154, 13, 255, 0.762);/*rgba(255, 0, 0, 0.453);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.center-container {
+    transition: opacity .3s;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.identification-main-wrapper {
+    width: 400px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.637);
+}
+
+.app-title-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .app-title {
+        font-size: 70px;
+        letter-spacing: -2px;
+        color: #fff;
+        position: relative;
+        font-weight: 600;
+        text-shadow: 0px 0px 10px black;
+        transition: .3s;
+
+        &:hover {
+            font-size: 80px;
+            text-shadow: 0px 0px 15px black;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<div class="board-header-wrapper">
+    {{ board?.name + ' | ' + board?.description }}
+</div>
+<div class="main-columns-wrapper">
+    <app-column class="column" *ngFor="let column of columns" [column]="column"></app-column>
+</div>

@@ -1,0 +1,33 @@
+.login-form {
+    margin-bottom: 10px;
+
+    .input-wrapper {
+        margin: 10px 0px;
+    }
+}
+
+.login-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    justify-content: start;
+    align-items: center;
+
+    .login-title {
+        margin-bottom: 20px;
+        font-size: 23px;
+        font-weight: 700;
+    }
+}
+
+.submit-wrapper {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+
+    .submit-button {
+        width: 75px;
+        height: 30px;
+    }
+}
