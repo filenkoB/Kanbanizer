@@ -20,7 +20,7 @@ namespace backend.Infrastructure
 
         private static IServiceCollection AddDbConnector(IServiceCollection services) {
             services.AddTransient<IDbConnection, SqlConnection>(factory => 
-                new SqlConnection("Server=localhost;Database=CANBAN_DB;User Id=CANBAN_migr;Password=CANBAN_migr;"));
+                new SqlConnection("Server=sql-server-db,1433;Database=CANBAN_DB;User Id=sa;Password=pass$;"));
             services.AddTransient<IDBConnector, DapperConnector>();
             return services;
         }

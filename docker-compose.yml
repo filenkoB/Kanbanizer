@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+
+  backend:
+    container_name: backend
+    build: ./backend/
+    image: backend
+    ports:
+      - "5001:5001"
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - sql-server-db
+
+  frontend:
+    container_name: frontend
+    build: ./frontend/
+    image: frontend
+    ports:
+      - "4200:80"
+    networks:
+      - frontend
+    depends_on:
+      - backend
+
+  sql-server-db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "uREopvJu1710190$"
+      ACCEPT_EULA: "Y"
+    networks:
+      - backend
+    volumes:
+      - sql-server-vol:/var/opt/mssql
+
+networks:
+  backend:
+  frontend:
+
+volumes:
+  sql-server-vol:
