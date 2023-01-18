@@ -8,7 +8,7 @@ builder.Services.AddInfrastructure();
 builder.Services.AddService(configuration);
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
-builder.WebHost.UseUrls("http://localhost:5001/");
+builder.WebHost.UseUrls("http://0.0.0.0::5001/");
 
 var app = builder.Build();
 

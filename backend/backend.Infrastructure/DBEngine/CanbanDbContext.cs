@@ -18,7 +18,7 @@ namespace backend.DBEngine
         { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=CANBAN_DB;User Id=CANBAN_migr;Password=CANBAN_migr;");
+            optionsBuilder.UseSqlServer("Server=sql-server-db,1433;Database=CANBAN_DB;User Id=sa;Password=pass$;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder) {
