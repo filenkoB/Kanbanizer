@@ -2,6 +2,13 @@ pipeline {
   agent any
 
   stages {
+    stage("docker") {
+      steps {
+        sh 'docker --version'
+        sh 'docker-compose version'
+      }
+    }
+    
     stage("frontend-test") {
       steps {
         echo 'frontend-test'
