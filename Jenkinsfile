@@ -2,27 +2,26 @@ pipeline {
   agent any
 
   stages {
-    stage("frontend-test") {
+    stage('Maven Install') {
+    	agent {
+      	docker {
+        	image 'maven:3.5.0'
+        }
+      }
       steps {
-        echo 'frontend-test'
+      	sh 'mvn clean install'
       }
     }
     
-    stage("build-backend") {
+    stage("build docker-compose") {
       steps {
-        echo 'build-backend'
+        sh 'docker-compose build .'
       }
     }
     
-    stage("build-frontend") {
+    stage("run docker-compose infrastructure") {
       steps {
-        echo 'build-frontend'
-      }
-    }
-    
-    stage("deploy") {
-      steps {
-        echo 'deploy'
+        sh 'docker-compose build up -d'
       }
     }
   }
